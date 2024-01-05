@@ -1,0 +1,4 @@
+# ignore the dataset file > 100 mb
+survey_results_public2022.csv
+survey_results_public2021.csv
+survey_results_public2023.csv
