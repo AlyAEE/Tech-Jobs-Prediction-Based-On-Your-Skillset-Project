@@ -1,0 +1,202 @@
+skills_group_0:
+- Hugging Face Transformers
+- Keras
+- NumPy
+- Pandas
+- Scikit-learn
+- TensorFlow
+- Torch/PyTorch
+- IPython/Jupyter
+- Spyder
+skills_group_1:
+- PHP
+- MariaDB
+- MySQL
+- OVH
+- Drupal
+- Laravel
+- Symfony
+- jQuery
+- PhpStorm
+- Webstorm
+skills_group_10:
+- IBM DB2
+- Oracle
+- IBM Cloud or Watson
+- Oracle Cloud Infrastructure
+skills_group_11:
+- HTML/CSS
+- JavaScript
+- TypeScript
+- React.js
+- Yarn
+- npm
+- Visual Studio Code
+skills_group_12:
+- Objective-C
+- Swift
+- Homebrew
+- Xcode
+skills_group_13:
+- Assembly
+- C
+- C++
+- MATLAB
+- CLion
+skills_group_14:
+- Git
+- Ansible
+- Docker
+- Kubernetes
+- Pulumi
+- Terraform
+skills_group_15:
+- Clojure
+- Haskell
+- LISP
+- OCaml
+- Emacs
+skills_group_16:
+- Atom
+- Eclipse
+- NetBeans
+- Sublime Text
+skills_group_17:
+- Lua
+- Rust
+- Neovim
+skills_group_18:
+- Electron
+- React Native
+skills_group_19:
+- Capacitor
+- Cordova
+- Ionic
+skills_group_2:
+- Scala
+- Cassandra
+- Neo4j
+- Play Framework
+- Apache Kafka
+- Apache Spark
+- Hadoop
+skills_group_20:
+- Deno
+- Fastify
+- Svelte
+skills_group_21:
+- SVN
+- Delphi
+- RAD Studio (Delphi, C++ Builder)
+skills_group_22:
+- CouchDB
+- Couchbase
+skills_group_23:
+- DynamoDB
+- AWS
+- Google Cloud
+skills_group_24:
+- Python
+- Django
+- FastAPI
+- Flask
+- PyCharm
+skills_group_25:
+- Unity 3D
+- Unreal Engine
+skills_group_26:
+- DigitalOcean
+- Heroku
+- Linode
+skills_group_27:
+- Elixir
+- Erlang
+- Phoenix
+skills_group_28:
+- Solidity
+- MongoDB
+- Express
+- Gatsby
+- Next.js
+- Node.js
+skills_group_29:
+- Groovy
+- Java
+- Spring
+- IntelliJ
+skills_group_3:
+- Colocation
+- Managed Hosting
+- OpenStack
+- VMware
+skills_group_30:
+- GTK
+- Qt
+- Qt Creator
+skills_group_31:
+- Cloud Firestore
+- Firebase Realtime Database
+- Firebase
+skills_group_32:
+- Nuxt.js
+- Vue.js
+skills_group_33:
+- Bash/Shell
+- Nano
+- Vim
+skills_group_34:
+- Angular
+- Angular.js
+skills_group_35:
+- Elasticsearch
+- PostgreSQL
+- Redis
+skills_group_36:
+- Chef
+- Puppet
+skills_group_37:
+- Go
+- GoLand
+skills_group_4:
+- C#
+- F#
+- ASP.NET
+- 'ASP.NET Core '
+- Blazor
+- .NET
+- Uno Platform
+- Xamarin
+- Rider
+- Visual Studio
+skills_group_5:
+- PowerShell
+- SQL
+- VBA
+- Microsoft SQL Server
+- Microsoft Azure
+- Notepad++
+skills_group_6:
+- Ruby
+- Ruby on Rails
+- Flow
+- RubyMine
+- TextMate
+skills_group_7:
+- Dart
+- Kotlin
+- SQLite
+- Flutter
+- Android Studio
+skills_group_8:
+- Mercurial
+- APL
+- COBOL
+- Crystal
+- Fortran
+- Perl
+- SAS
+skills_group_9:
+- Julia
+- R
+- Tidyverse
+- RStudio
