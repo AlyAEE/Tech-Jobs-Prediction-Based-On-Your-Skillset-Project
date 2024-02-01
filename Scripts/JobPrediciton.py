@@ -1,4 +1,4 @@
-OG_DATA_PKL    =  "data.pkl"
+LOG_DATA_PKL    =  "data.pkl"
 LOG_MODEL_PKL   =  "model.pkl"
 LOG_METRICS_PKL =  "metrics.pkl"
 
@@ -40,7 +40,7 @@ class JobPrediction:
         # Retrieve skills_cluster Dataframe
         self.skills_clusters_df   = self.load_clusters_config(clusters_yaml_path)
 
-    def load_mlflow_objs():
+    def load_mlflow_objs(self):
         """Load artifacts from mlflow run"""
         # Initialize client and experiment
         mlflow.set_tracking_uri(self.tracking_uri)
@@ -94,8 +94,8 @@ class JobPrediction:
     # **************    Prediction Functions    **************  
     # ========================================================
 
-    def create_features_array(self, skills_entry):
-        """Create the features array from a list of skills entry"""
+    def create_features_df(self, skills_entry):
+        """Create the features from a list of skills entry"""
 
         # Create clusters features array
         def create_clusters_features(self, skills_entry):
@@ -126,23 +126,26 @@ class JobPrediction:
         skills_features   = create_skills_features(self, skills_entry, 
                                                    exclude_features=clusters_features.index)
         
-        features_array = combine_features(skills_features,clusters_features)
-        return features_array
+        features_df = combine_features(skills_features,clusters_features)
+        return features_df
 
 
     def predict_job_probabilities(self, skills_entry):
         """ Predict probabilities of different jobs according to given skills"""
         # Create features array
-        features_array = self.create_features_array(skills_entry)
+        features_array = self.create_features_df(skills_entry)
 
         # Predict probabilities
-        predictions = self.model.predict_proba([features_array])
+        predictions = self.model.predict_proba(features_array)
         predictions = [prob[0][1] for prob in predictions] #Keep positive predictions
         predictions = pd.Series(predictions, index=self.targets_names)
 
+        return predictions
+    # ===================================================================
+    # **************    Skills Recommendation Functions    **************
+    # ===================================================================
+    
+    # def recommend_new_skills(self, skills_entry, target_job, threshold = 0):
 
-    # ========================================================
-    # **************    Simulation Functions    **************
-    # ========================================================
         
     
