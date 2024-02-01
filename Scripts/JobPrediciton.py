@@ -141,11 +141,33 @@ class JobPrediction:
         predictions = pd.Series(predictions, index=self.targets_names)
 
         return predictions
+    
     # ===================================================================
     # **************    Skills Recommendation Functions    **************
     # ===================================================================
     
-    # def recommend_new_skills(self, skills_entry, target_job, threshold = 0):
+    def recommend_new_skills(self, skills_entry, target_job, threshold = 0):
+        # Calculate base probability
+        base_predictions = self.predict_job_probabilities(skills_entry)
+
+        # Get all possible additional skills
+        all_skills = pd.Series(self.get_all_skills())
+        new_skills = all_skills[~all_skills.isin(skills_entry)].copy()
+
+        # Simulate new skills
+        simulated_results = []
+        for skill in new_skills:
+            additional_skill_prob = self.predict_job_probabilities([skill] + skills_entry)
+            additional_skill_uplift = (additional_skill_prob - base_predictions) / base_predictions
+            additional_skill_uplift.name = skill
+            simulated_results.append(additional_skill_uplift)
+
+        simulated_results = pd.DataFrame(simulated_results)
+
+        # Recommend new skills
+        target_results = simulated_results[target_job].sort_values(ascending=False)
+        positive_mask = (target_results > threshold)
+        return target_results[positive_mask]
 
         
     
